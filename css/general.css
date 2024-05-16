@@ -1,0 +1,184 @@
+/*************************
+---- DESIGN DECESIONS ----
+
+   Font-size (px) : 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 60 / 86 / 96
+
+   Spacing (px) : 2 / 4 / 6 / 8 / 10 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 112 / 128
+
+   COLOR : 
+    PRIMARY : #ffd43b
+
+
+
+
+**************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #555;
+  line-height: 1;
+}
+
+/*******************
+  LAYOUT
+********************/
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*******************
+  HEADINGS
+********************/
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.75px;
+  line-height: 1.2;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+}
+
+.sub-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #111;
+  color: #ffd43b;
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+/*******************
+  BUTTONS
+********************/
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  border-radius: 9px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 2.4rem;
+  transition: all 0.3s ease-out;
+  color: #111;
+}
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: #ffd43b;
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: #e6bf35;
+  color: #333;
+}
+
+.btn--secondary:link,
+.btn--secondary:visited {
+  background-color: #fff;
+}
+
+.btn--secondary:hover,
+.btn--secondary:active {
+  background-color: #fff6d8;
+  color: #333;
+}
+
+/*******************
+  LIST
+********************/
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4.8rem;
+}
+
+.list-li {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/*******************
+  LINKS
+********************/
+
+.link:link,
+.link:visited {
+  font-size: 1.8rem;
+  color: #4e400c;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.link:hover,
+.link:active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/*******************
+  HELPER CLASS
+********************/
+
+.center {
+  text-align: center;
+  margin-top: 6.4rem;
+}
