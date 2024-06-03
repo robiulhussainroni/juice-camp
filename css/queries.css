@@ -114,6 +114,7 @@
 
   .mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .nav-open .mobile-nav-icon[name="close-outline"] {
