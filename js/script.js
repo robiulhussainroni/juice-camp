@@ -10,3 +10,8 @@ const headerEl = document.querySelector(".main-header");
 mobileNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
+
+// TODO
+
+// why focus doesn't happenig on mobile nav
+// Making Accordion Work
