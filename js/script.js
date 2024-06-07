@@ -7,8 +7,20 @@ year.textContent = currentYear;
 const mobileNavEl = document.querySelector(".mobile-nav");
 const headerEl = document.querySelector(".main-header");
 
-mobileNavEl.addEventListener("click", function () {
+// Function to toggle the nav
+const toggleNav = () => {
   headerEl.classList.toggle("nav-open");
+};
+
+// Add click event listener to the mobile nav button
+mobileNavEl.addEventListener("click", toggleNav);
+
+// Add click event listener to each navigation link
+const navLinks = document.querySelectorAll(".main-header nav a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    headerEl.classList.remove("nav-open");
+  });
 });
 
 ///////////////////////////////////////////////////////////

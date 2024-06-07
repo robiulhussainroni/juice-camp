@@ -398,3 +398,12 @@
     font-size: 2rem;
   }
 }
+
+/********************
+  Below 360px ( Smaller Mobile)
+*********************/
+@media (max-width: 22.5em) {
+  .main-nav {
+    height: 70vh;
+  }
+}
