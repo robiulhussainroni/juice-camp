@@ -69,3 +69,28 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+///////////////////////////////////////////////////////////
+// Accordion
+
+// Select all step buttons
+const stepButtons = document.querySelectorAll(".how-button");
+
+// Add event listener to each button
+stepButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Get the parent .steps element
+    const stepsEl = this.closest(".steps");
+
+    // Toggle the .open class
+    stepsEl.classList.toggle("open");
+
+    // Change the icon direction based on open state
+    const icon = this.querySelector(".how-icon");
+    if (stepsEl.classList.contains("open")) {
+      icon.name = "chevron-down-outline";
+    } else {
+      icon.name = "chevron-up-outline";
+    }
+  });
+});
