@@ -1,14 +1,46 @@
-// Getting new year
-const year = document.querySelector(".year");
+///////////////////////////////////////////////////////////
+// Set current year
+const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
-year.textContent = currentYear;
+yearEl.textContent = currentYear;
 
-// Making Mobile Navigation Work
-const mobileNavEl = document.querySelector(".mobile-nav");
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".mobile-nav");
 const headerEl = document.querySelector(".main-header");
 
-mobileNavEl.addEventListener("click", function () {
+btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+});
+
+///////////////////////////////////////////////////////////
+// Smooth scrolling animation
+
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close mobile naviagtion
+    if (link.classList.contains("main-nav-link"))
+      headerEl.classList.toggle("nav-open");
+  });
 });
 
 ///////////////////////////////////////////////////////////
@@ -37,8 +69,3 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
-
-// TODO
-
-// why focus doesn't happenig on mobile nav
-// Making Accordion Work
