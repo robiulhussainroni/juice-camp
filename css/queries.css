@@ -267,7 +267,7 @@
 }
 
 /********************
-  Below 592px ( Bigger Mobile)
+  Below 592px (Bigger Mobile)
 *********************/
 
 @media (max-width: 37em) {
@@ -370,9 +370,9 @@
 }
 
 /********************
-  Below 400px ( Mobile)
+  Below 450px ( Mobile)
 *********************/
-@media (max-width: 25em) {
+@media (max-width: 28.125em) {
   .heading-primary {
     font-size: 4rem;
   }
@@ -394,7 +394,7 @@
   }
 
   .steps {
-    padding: 1.6rem 2.4rem;
+    padding: 1.2rem;
   }
 
   .step-description {
