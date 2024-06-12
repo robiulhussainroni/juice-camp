@@ -66,11 +66,6 @@
   Below 944px ( Tablets)
 *********************/
 @media (max-width: 59em) {
-  html {
-    font-size: 50%;
-    /* 8px */
-  }
-
   .hero {
     grid-template-columns: 1.75fr 1.25fr;
     gap: 6.4rem;
@@ -102,8 +97,11 @@
 
   .main-nav-ul {
     flex-direction: column;
-    gap: 4.8rem;
-    font-size: 3rem;
+    gap: 5.2rem;
+  }
+
+  .main-nav-li:last-child {
+    margin-top: 2.4rem;
   }
 
   .nav-open .main-nav {
@@ -123,6 +121,11 @@
 
   .nav-open .mobile-nav-icon[name="menu-outline"] {
     display: none;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 
   .pricing-starter,
@@ -151,6 +154,11 @@
   Below 736px ( Smaller Tablets)
 *********************/
 @media (max-width: 46em) {
+  html {
+    font-size: 50%;
+    /* 8px */
+  }
+
   .grid {
     column-gap: 4.8rem;
     row-gap: 6.4rem;
@@ -276,21 +284,25 @@
   }
 
   .heading-tertiary {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .how-button {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .how-icon {
     width: 2.4rem;
     height: 2.4rem;
   }
 
-  .how-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
   .step {
     font-size: 2rem;
+  }
+
+  .steps {
+    padding: 3rem;
   }
 
   .grid--2-cols {
@@ -361,11 +373,6 @@
   Below 400px ( Mobile)
 *********************/
 @media (max-width: 25em) {
-  html {
-    font-size: 43.75%;
-    /* 7px */
-  }
-
   .heading-primary {
     font-size: 4rem;
   }
