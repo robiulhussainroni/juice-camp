@@ -371,6 +371,10 @@
   padding: 2.4rem;
 }
 
+.shape {
+  border-radius: 86% 14% 94% 6% / 5% 95% 5% 95%;
+}
+
 .first-testimonial {
   background-color: #7950f2;
   color: #fff;
